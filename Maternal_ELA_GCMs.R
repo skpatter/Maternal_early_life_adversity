@@ -80,7 +80,7 @@ GC_model1 <- map2stan(
     
     c(ap_Focal)[Focal] ~ dnorm(0,sigma_focal) ,
     c(ap,bp_female,bp_grpsize,bp_age,bp_ageS,bp_rank,bp_momage,
-      bp_challenges,bp_grass,bp_ageopuntia,bp_adv) ~ dnorm(0,2) ,
+      bp_challenges,bp_grass,bp_ageopuntia,bp_adv) ~ dnorm(0,1) ,
     c(sigma_focal)  ~ dcauchy(0,1)  ,
     sigma ~ dcauchy(0,2) 
     
@@ -116,7 +116,7 @@ GC_model2 <- map2stan(
     
     c(ap_Focal)[Focal] ~ dnorm(0,sigma_focal) ,
     c(ap,bp_age,bp_ageS,bp_female,bp_grpsize,bp_rank,bp_momage,
-      bp_challenges,bp_grass,bp_ageopuntia,bp_adv,bp_rank_adv) ~ dnorm(0,2) ,
+      bp_challenges,bp_grass,bp_ageopuntia,bp_adv,bp_rank_adv) ~ dnorm(0,1) ,
     c(sigma_focal)  ~ dcauchy(0,1)  ,
     sigma ~ dcauchy(0,2) 
     
@@ -154,7 +154,7 @@ GC1_separate <- map2stan(
     c(ap_Focal)[Focal] ~ dnorm(0,sigma_focal) ,
     c(ap,bp_age,bp_ageS,bp_momage,bp_ageop,bp_grpsizeCur,bp_challenge,bp_grass,
       bp_female,bp_rank,bp_grpsizeELA,bp_drought,
-      bp_ibiELA,bp_momloss,bp_firstbirth) ~ dnorm(0,2) ,
+      bp_ibiELA,bp_momloss,bp_firstbirth) ~ dnorm(0,1) ,
     
     c(sigma_focal)  ~ dcauchy(0,1)  ,
     
@@ -201,7 +201,7 @@ GC2_separate <- map2stan(
     c(ap,bp_age,bp_ageS,bp_momage,bp_ageop,bp_grpsizeCur,bp_challenge,bp_grass,
       bp_female,bp_rank,bp_grpsizebirth, bp_grpsizeELA,bp_drought,
       bp_ibiELA,bp_momloss,bp_firstbirth,bp_rank_grpsizeELA,bp_rank_drought,
-      bp_rank_ibiELA,bp_rank_momloss,bp_rank_firstbirth) ~ dnorm(0,2) ,
+      bp_rank_ibiELA,bp_rank_momloss,bp_rank_firstbirth) ~ dnorm(0,1) ,
     
     c(sigma_focal)  ~ dcauchy(0,1)  ,
     
