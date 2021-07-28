@@ -81,7 +81,7 @@ nursing1 <- map2stan(
       bp_opuntia,bp_female,
       
       bm_age,bm_adv,bm_rank,bm_challenge,bm_grass,bm_grpsize,bm_momage,
-      bm_opuntia,bm_female) ~ dnorm(0,2) ,
+      bm_opuntia,bm_female) ~ dnorm(0,1) ,
     sigma_focal  ~ dcauchy(0,2)  ,
     Rho_focal ~ dlkjcorr(3) ,
     scale ~ dcauchy(0,2)  
@@ -128,7 +128,7 @@ nursing2 <- map2stan(
       
       bm_age,bm_adv,bm_rank,bm_challenge,bm_grass,bm_grpsize,bm_momage,
       bm_rank_adv,
-      bm_opuntia,bm_female) ~ dnorm(0,2) ,
+      bm_opuntia,bm_female) ~ dnorm(0,1) ,
     sigma_focal  ~ dcauchy(0,2)  ,
     Rho_focal ~ dlkjcorr(3) ,
     scale ~ dcauchy(0,2)  
@@ -175,7 +175,7 @@ nursing1_separate <- map2stan(
       
       bm_age,bm_momage,bm_rank,bm_challenge,bm_grass,bm_grpsize,
       bm_opuntia,bm_female,
-      bm_grpsizeELA,bm_drought,bm_ibiELA,bm_momloss,bm_firstbirth) ~ dnorm(0,2) ,
+      bm_grpsizeELA,bm_drought,bm_ibiELA,bm_momloss,bm_firstbirth) ~ dnorm(0,1) ,
     sigma_focal  ~ dcauchy(0,2)  ,
     Rho_focal ~ dlkjcorr(3) ,
     scale ~ dcauchy(0,2)  
@@ -232,7 +232,7 @@ nursing2_separate <- map2stan(
       bm_age,bm_momage,bm_rank,bm_challenge,bm_grass,bm_grpsize,
       bm_opuntia,bm_female,
       bm_grpsizeELA,bm_drought,bm_ibiELA,bm_momloss,bm_firstbirth,
-      bm_rank_grpsizeELA,bm_rank_drought,bm_rank_ibiELA,bm_rank_momloss,bm_rank_firstbirth) ~ dnorm(0,2) ,
+      bm_rank_grpsizeELA,bm_rank_drought,bm_rank_ibiELA,bm_rank_momloss,bm_rank_firstbirth) ~ dnorm(0,1) ,
     sigma_focal  ~ dcauchy(0,2)  ,
     Rho_focal ~ dlkjcorr(3) ,
     scale ~ dcauchy(0,2)  
@@ -282,7 +282,7 @@ carrying1 <- map2stan(
       bp_opuntia,bp_female,
       
       bm_age,bm_adv,bm_rank,bm_challenge,bm_grass,bm_grpsize,bm_momage,
-      bm_opuntia,bm_female) ~ dnorm(0,2) ,
+      bm_opuntia,bm_female) ~ dnorm(0,1) ,
     sigma_focal  ~ dcauchy(0,2)  ,
     Rho_focal ~ dlkjcorr(3) ,
     scale ~ dcauchy(0,2)  
@@ -331,7 +331,7 @@ carrying2 <- map2stan(
       
       bm_age,bm_adv,bm_rank,bm_challenge,bm_grass,bm_grpsize,bm_momage,
       bm_rank_adv,
-      bm_opuntia,bm_female) ~ dnorm(0,2) ,
+      bm_opuntia,bm_female) ~ dnorm(0,1) ,
     sigma_focal  ~ dcauchy(0,2)  ,
     Rho_focal ~ dlkjcorr(3) ,
     scale ~ dcauchy(0,2)  
@@ -383,7 +383,7 @@ carrying1_separate <- map2stan(
       
       bm_age,bm_momage,bm_rank,bm_challenge,bm_grass,bm_grpsize,
       bm_opuntia,bm_female,
-      bm_grpsizeELA,bm_drought,bm_ibiELA,bm_momloss,bm_firstbirth) ~ dnorm(0,2) ,
+      bm_grpsizeELA,bm_drought,bm_ibiELA,bm_momloss,bm_firstbirth) ~ dnorm(0,1) ,
     sigma_focal  ~ dcauchy(0,2)  ,
     Rho_focal ~ dlkjcorr(3) ,
     scale ~ dcauchy(0,2)  
@@ -439,7 +439,7 @@ carrying2_separate <- map2stan(
       bm_age,bm_momage,bm_rank,bm_challenge,bm_grass,bm_grpsize,
       bm_opuntia,bm_female,
       bm_grpsizeELA,bm_drought,bm_ibiELA,bm_momloss,bm_firstbirth,
-      bm_rank_grpsizeELA,bm_rank_drought,bm_rank_ibiELA,bm_rank_momloss,bm_rank_firstbirth) ~ dnorm(0,2) ,
+      bm_rank_grpsizeELA,bm_rank_drought,bm_rank_ibiELA,bm_rank_momloss,bm_rank_firstbirth) ~ dnorm(0,1) ,
     sigma_focal  ~ dcauchy(0,2)  ,
     Rho_focal ~ dlkjcorr(3) ,
     scale ~ dcauchy(0,2)  
