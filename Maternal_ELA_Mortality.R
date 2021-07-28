@@ -181,6 +181,20 @@ mortality2yrs2_separate <- map2stan(
 )
 
 
+#frequentist models
+
+library(coxme)
+
+full_model1<-coxme(Surv(days_survived,died)~s_cumadvprimip+s_ageopuntia2 + s_rank +
+                    s_MomAge + s_grpsizeBirth+(1|Mom),data=dd) 
+summary(full_model1)
+
+full_model1_interaction<-coxme(Surv(days_survived,died)~s_cumadvprimip+s_ageopuntia2 + s_rank +
+                     s_MomAge + s_grpsizeBirth + s_cumadvprimip*s_rank + (1|Mom),data=dd) 
+summary(full_model1_interaction)
+
+
+
 ##################
 ###            ###
 ###   Plots    ###
